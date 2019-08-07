@@ -6,11 +6,11 @@ localtime = time.localtime(time.time())
 timeStr= str(localtime.tm_mon) + "/" + str(localtime.tm_mday) + "/" + str(localtime.tm_year) + "   " + str(localtime.tm_hour) + ":" + str(localtime.tm_min)
 
 def drivetime(start,end):
-    r = requests.get('https://maps.googleapis.com/maps/api/directions/json?&origin='+ start +'&destination='+ end +'&departure_time=now&traffic_model=best_guess&key=GOOGLEK_KEY')
+    r = requests.get('https://maps.googleapis.com/maps/api/directions/json?&origin='+ start +'&destination='+ end +'&departure_time=now&traffic_model=best_guess&key=AIzaSyApmMEineEE6edY-mm3wYjgcZ3vqXvi_A0')
     output = r.json()
     return output["routes"][0]['legs'][0]["duration_in_traffic"]["text"]
     
-f=open("/home/mitch/Documents/drivetime/drivetime.txt","a+")
+f=open("/home/mitchaheim/drivetime/drivetime.txt","a+")
 
 
 f.write("\r\n"+ timeStr +",Woodlands,"+"Method,"+drivetime("The+Woodlands+TX","Method+Architecture+PLLC,+Lamar+Street"))

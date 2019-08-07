@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python /home/mitch/Documents/drivetime/drivetime_afternoon.py
+python /home/mitchaheim/drivetime/drivetime_afternoon.py
